@@ -1,0 +1,14 @@
+{
+  "name": "beta-karttakuva-webmercator-minimal",
+  "main": "index.js",
+  "dependencies": {
+    "ol": "6.5.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html"
+  }
+}

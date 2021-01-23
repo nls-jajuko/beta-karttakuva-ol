@@ -5,7 +5,6 @@ import apply from 'ol-mapbox-style';
 import Hash from './hash';
 import proj4 from 'proj4';
 import Map from 'ol/Map';
-import { get as getProjection, getTransform } from 'ol/proj';
 import { register } from 'ol/proj/proj4';
 
 
@@ -14,15 +13,15 @@ proj4.defs("EPSG:3857", "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0
 //proj4.defs("EPSG:3067", "+proj=utm +zone=35 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
 register(proj4);
 
-const tileVer ='v20',styleVer = 'v20',
+const tileVer = 'v20', styleVer = 'v20',
   tileMatrixSet = 'WGS84_Pseudo-Mercator',
   apiKey = '7cd2ddae-9f2e-481c-99d0-404e7bc7a0b2',
   styleUrl = `https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/stylejson/${styleVer}/taustakartta.json?TileMatrixSet=${tileMatrixSet}&api-key=${apiKey}`;
 
-let hash = new Hash(),
-map = new Map({ target: 'map' });
+const hash = new Hash(),
+  map = new Map({ target: 'map' });
 hash.addTo(map);
- 
+
 fetch(styleUrl).then(r => r.json()).then(styleJson => {
   apply(
     map, styleJson).then(function (map) {

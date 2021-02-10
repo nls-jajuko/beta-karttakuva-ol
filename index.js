@@ -7,6 +7,7 @@ import Hash from './hash';
 /* map style and version selections */
 /* v20 is current published in 2020 */
 /* v21 available in 2021 */
+/* styleUrl refers to TileJson document which describes the Vector Tiles */
 const tileVer = 'v20', styleVer = 'v20',
   styleName = 'hobby',
   tileMatrixSet = 'WGS84_Pseudo-Mercator',

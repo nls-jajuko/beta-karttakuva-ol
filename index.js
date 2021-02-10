@@ -11,7 +11,7 @@ import Hash from './hash';
 const tileVer = 'v20', styleVer = 'v20',
   styleName = 'hobby',
   tileMatrixSet = 'WGS84_Pseudo-Mercator',
-  /* get your own api key at maanmittauslaitos.fi */
+  /* get your own api key at maanmittauslaitos.fi <https://www.maanmittauslaitos.fi/rajapinnat/api-avaimen-ohje> */
   apiKey = '7cd2ddae-9f2e-481c-99d0-404e7bc7a0b2',
   styleUrl = `https://avoin-karttakuva.maanmittauslaitos.fi/vectortiles/stylejson/${styleVer}/${styleName}.json?TileMatrixSet=${tileMatrixSet}&api-key=${apiKey}`;
 

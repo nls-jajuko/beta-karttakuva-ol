@@ -5,8 +5,8 @@ import Map from 'ol/Map';
 import Hash from './hash';
 
 /* map style and version selections */
-/* v20 is current published in 2020 */
-/* v21 available in 2021 */
+/* v20 is current vector tile content released in 2020-06 */
+/* v21 will be available in 2021 */
 /* styleUrl refers to Style document with a link to TileJson document which describes the Vector Tiles */
 const tileVer = 'v20', styleVer = 'v20',
   styleName = 'hobby',

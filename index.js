@@ -25,7 +25,6 @@ fetch(styleUrl).then(r => r.json()).then(styleJson => {
   apply(
     map, styleJson).then(function (map) {
       map.addControl(new FullScreen());
-      window.map = map;
     });
 });
 
